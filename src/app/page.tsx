@@ -3,7 +3,39 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div
+      id="home"
+      className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]"
+    >
+      <nav className="fixed top-2 left-1/2 transform -translate-x-1/2 bg-white/80 backdrop-blur-md shadow-md z-50 w-2/6 rounded-full">
+        <ul className="flex justify-center space-x-8 p-4">
+          <li>
+            <a
+              href="#home"
+              className="text-gray-500 hover:text-blue-500 transition-colors duration-300"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="#about"
+              className="text-gray-500 hover:text-blue-500 transition-colors duration-300"
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              href="#experience"
+              className="text-gray-500 hover:text-blue-500 transition-colors duration-300"
+            >
+              Experience
+            </a>
+          </li>
+        </ul>
+      </nav>
+
       <main className="flex flex-col gap-6 row-start-2 items-center sm:items-center">
         <div className="relative">
           <Image
@@ -42,6 +74,48 @@ export default function Home() {
           >
             <span>LinkedIn</span>
           </Link>
+        </div>
+
+        <div id="about">
+          <h2 className="text-2xl">About</h2>
+          <p>
+            I'm a senior software engineer with 5 years of experience. I have
+            worked with a variety of technologies including React.js, Node.js,
+            and GraphQL.
+          </p>
+          <h2 className="text-2xl">About</h2>
+          <p>
+            I'm a senior software engineer with 5 years of experience. I have
+            worked with a variety of technologies including React.js, Node.js,
+            and GraphQL.
+          </p>
+          <h2 className="text-2xl">About</h2>
+          <p>
+            I'm a senior software engineer with 5 years of experience. I have
+            worked with a variety of technologies including React.js, Node.js,
+            and GraphQL.
+          </p>
+        </div>
+
+        <div id="experience">
+          <h2 className="text-2xl">About</h2>
+          <p>
+            I'm a senior software engineer with 5 years of experience. I have
+            worked with a variety of technologies including React.js, Node.js,
+            and GraphQL.
+          </p>
+          <h2 className="text-2xl">About</h2>
+          <p>
+            I'm a senior software engineer with 5 years of experience. I have
+            worked with a variety of technologies including React.js, Node.js,
+            and GraphQL.
+          </p>
+          <h2 className="text-2xl">About</h2>
+          <p>
+            I'm a senior software engineer with 5 years of experience. I have
+            worked with a variety of technologies including React.js, Node.js,
+            and GraphQL.
+          </p>
         </div>
       </main>
     </div>
