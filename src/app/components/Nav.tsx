@@ -12,10 +12,10 @@ export const Nav = () => {
         </li>
         <li>
           <a
-            href="#about"
+            href="#skills"
             className="text-gray-500 hover:text-blue-500 transition-colors duration-300"
           >
-            About
+            Skills
           </a>
         </li>
         <li>

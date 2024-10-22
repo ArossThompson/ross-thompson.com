@@ -1,15 +1,9 @@
+import Image from "next/image";
+
 export const Skills = () => {
   const skills = [
-    {
-      name: "Typescript",
-      icon: "/icons/TS.svg",
-      color: "text-blue-600",
-    },
-    {
-      name: "JavaScript",
-      icon: "/icons/Javascript.svg",
-      color: "text-yellow-500",
-    },
+    { name: "Typescript", icon: "/icons/TS.svg" },
+    { name: "JavaScript", icon: "/icons/Javascript.svg" },
     { name: "React", icon: "/icons/react.svg" },
     { name: "Angular", icon: "/icons/angular.svg" },
     { name: "CSS", icon: "/icons/CSS3.svg" },
@@ -33,10 +27,12 @@ export const Skills = () => {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
           {skills.map((skill) => (
             <div key={skill.name} className="flex flex-col items-center gap-4">
-              <img
+              <Image
                 src={skill.icon}
                 alt={`${skill.name} icon`}
                 className={`w-16 h-16`}
+                width={64}
+                height={64}
               />
               <span className="text-lg font-semibold">{skill.name}</span>
             </div>
