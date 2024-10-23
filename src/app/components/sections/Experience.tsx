@@ -37,22 +37,28 @@ export const Experience = () => {
   return (
     <section id="experience" className="scroll-snap-section">
       <div className="flex flex-col items-center justify-center p-24 pb-20 gap-16 bg-[#1A1A2E] text-[#EAEAEA]">
-        <h2 className="text-4xl ">Experience</h2>
+        <h2 className="text-4xl">Experience</h2>
 
-        <div className="relative border-l-2 border-gray-300">
+        <div className="relative w-full">
+          {/* Timeline container with central line */}
+
           {experiences.map((exp, index) => (
-            <div key={index} className="mb-16 pl-8 relative">
-              {/* Dot on the timeline */}
-              <div className="absolute top-0 left-[-12px] w-4 h-4 bg-sky-500 rounded-full border-2 border-white" />
-
-              {/* Experience content */}
-              <div>
+            <div
+              key={index}
+              className={`mb-16 pl-8 pr-8 relative w-1/2 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ${
+                index % 2 === 0 ? "left-0" : "left-1/2"
+              }`}
+            >
+              <div
+                className={`${
+                  index % 2 === 0 ? "text-left ml-[20px]" : " mr-[20px]"
+                }`}
+              >
                 <h3 className="text-2xl font-bold">{exp.role}</h3>
                 <h4 className="text-xl font-semibold">{exp.company}</h4>
                 <p className="italic text-gray-500 mb-4">{exp.duration}</p>
 
-                {/* Task list */}
-                <ul className="list-disc list-outside pl-4 text-lg space-y-2">
+                <ul className="list-disc list-outside  text-lg space-y-2 list-none">
                   {exp.tasks.map((task, idx) => (
                     <li key={idx}>{task}</li>
                   ))}
