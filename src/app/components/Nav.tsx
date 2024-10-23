@@ -1,6 +1,6 @@
 export const Nav = () => {
   return (
-    <nav className="fixed sm:top-5 left-1/2 transform -translate-x-1/2 bg-white/80 backdrop-blur-md shadow-md z-50 md:w-fit md:rounded-full w-full rounded-none">
+    <nav className="fixed md:top-5 left-1/2 transform -translate-x-1/2 bg-white/80 backdrop-blur-md shadow-md z-50 md:w-fit md:rounded-full w-full rounded-none">
       <ul className="flex justify-center space-x-8 p-4 px-16">
         <li>
           <a
