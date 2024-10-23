@@ -2,6 +2,17 @@ export const Experience = () => {
   const experiences = [
     {
       role: "Senior Software Engineer",
+      company: "UrbanChain",
+      duration: "October 2024 - Present",
+      tasks: [
+        "Developing a user portal that connects energy genarators with consumers.",
+        "Developed a blockchain-based solution to track energy consumption and production.",
+        "Led the development of a UI kit for consistency and efficiency in design.",
+        "Collaborated with back-end developers to integrate AWS cloud services using Node.js and .NET with REST and GraphQL.",
+      ],
+    },
+    {
+      role: "Senior Software Engineer",
       company: "Iris Software Group",
       duration: "November 2023 - June 2024",
       tasks: [
@@ -40,13 +51,11 @@ export const Experience = () => {
         <h2 className="text-4xl">Experience</h2>
 
         <div className="relative w-full">
-          {/* Timeline container with central line */}
-
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className={`mb-16 pl-8 pr-8 relative w-1/2 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ${
-                index % 2 === 0 ? "left-0" : "left-1/2"
+              className={`mb-16 pl-8 pr-8 relative lg:w-1/2 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ${
+                index % 2 === 0 ? "left-0" : "lg:left-1/2 right-0"
               }`}
             >
               <div
