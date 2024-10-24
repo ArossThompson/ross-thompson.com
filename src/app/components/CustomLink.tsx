@@ -1,12 +1,41 @@
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
-export const CustomLink = ({ text, href }: { text: string; href: string }) => {
+export const CustomLink = ({
+  text,
+  href,
+  icon,
+  link,
+}: {
+  text: string;
+  href: string;
+  icon: IconProp;
+  link: boolean;
+  download?: boolean;
+}) => {
+  const linkClasses =
+    "flex h-[50px] p-0 bg-[#009578] hover:bg-[#008168] active:bg-[#006e58] rounded-[5px] overflow-hidden border-none outline-none text-white text-lg font-semibold transition-colors duration-300 ease-in-out ";
+
   return (
-    <Link
-      className="flex items-center justify-center gap-2 rounded-full border border-solid border-transparent transition-colors bg-foreground text-background hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 min-w-[170px]"
-      href={href}
-    >
-      <span>{text}</span>
-    </Link>
+    <button>
+      {link ? (
+        <Link className={linkClasses} href={href}>
+          <span className="flex items-center h-full px-8">{text}</span>
+          <span className="flex items-center h-full px-4 bg-[#006e58]">
+            <FontAwesomeIcon icon={icon} />
+          </span>
+        </Link>
+      ) : (
+        <a className={linkClasses} href={href} download>
+          <span className="flex items-center h-full px-8">{text}</span>
+          <span className="flex items-center h-full px-4 bg-[#006e58]">
+            <FontAwesomeIcon icon={icon} />
+          </span>
+        </a>
+      )}
+    </button>
   );
 };
+
+// TODO: make the download attribute optional
