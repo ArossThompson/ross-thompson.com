@@ -12,7 +12,6 @@ export const CustomLink = ({
   href: string;
   icon: IconProp;
   link: boolean;
-  download?: boolean;
 }) => {
   const linkClasses =
     "flex h-[50px] p-0 bg-[#009578] hover:bg-[#008168] active:bg-[#006e58] rounded-[5px] overflow-hidden border-none outline-none text-white text-lg font-semibold transition-colors duration-300 ease-in-out ";
