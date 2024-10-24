@@ -30,7 +30,6 @@ export const Home = () => {
             href="/updatedcv.pdf"
             icon={faDownload}
             link={false}
-            download={true}
           />
 
           <CustomLink

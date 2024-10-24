@@ -26,6 +26,14 @@ export const Nav = () => {
             EXPERIENCE
           </a>
         </li>
+        <li>
+          <a
+            href="#contact"
+            className="text-gray-500 hover:text-blue-500 transition-colors duration-300"
+          >
+            CONTACT
+          </a>
+        </li>
       </ul>
     </nav>
   );

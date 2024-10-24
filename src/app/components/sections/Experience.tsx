@@ -50,19 +50,13 @@ export const Experience = () => {
       <div className="flex flex-col items-center justify-center p-24 pb-20 gap-16 bg-[#1A1A2E] text-[#EAEAEA]">
         <h2 className="text-4xl">Experience</h2>
 
-        <div className="relative w-full">
+        <div className="flex flex-col relative w-full gap-12">
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className={`mb-16 pl-8 pr-8 relative lg:w-1/2 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ${
-                index % 2 === 0 ? "left-0" : "lg:left-1/2 right-0"
-              }`}
+              className={`relative p-8 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700`}
             >
-              <div
-                className={`${
-                  index % 2 === 0 ? "text-left ml-[20px]" : " mr-[20px]"
-                }`}
-              >
+              <div>
                 <h3 className="text-2xl font-bold">{exp.role}</h3>
                 <h4 className="text-xl font-semibold">{exp.company}</h4>
                 <p className="italic text-gray-500 mb-4">{exp.duration}</p>
